@@ -1,0 +1,56 @@
+{
+  "train_rows": 3842,
+  "test_rows": 961,
+  "models": {
+    "Majority class": {
+      "accuracy": 0.5431841831425598,
+      "macro_f1": 0.23465947403910992,
+      "weighted_f1": 0.38238994416778993,
+      "per_class": {
+        "negative": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 69
+        },
+        "neutral": {
+          "precision": 0.5431841831425598,
+          "recall": 1.0,
+          "f1": 0.7039784221173297,
+          "support": 522
+        },
+        "positive": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 370
+        }
+      }
+    },
+    "Baseline TF-IDF + LogReg": {
+      "accuracy": 0.7950052029136316,
+      "macro_f1": 0.6719738407040777,
+      "weighted_f1": 0.7825064310745591,
+      "per_class": {
+        "negative": {
+          "precision": 0.9473684210526315,
+          "recall": 0.2608695652173913,
+          "f1": 0.4090909090909091,
+          "support": 69
+        },
+        "neutral": {
+          "precision": 0.7993254637436762,
+          "recall": 0.9080459770114943,
+          "f1": 0.8502242152466367,
+          "support": 522
+        },
+        "positive": {
+          "precision": 0.7793696275071633,
+          "recall": 0.7351351351351352,
+          "f1": 0.7566063977746871,
+          "support": 370
+        }
+      }
+    }
+  }
+}

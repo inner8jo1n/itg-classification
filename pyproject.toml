@@ -1,16 +1,22 @@
 [project]
 name = "itg-classification"
 version = "0.1.0"
-description = "Add your description here"
+description = "Sentiment classification of financial news: a one-week text classification project"
 readme = "README.md"
 authors = [
     { name = "imiderji", email = "skishou.developer@yandex.ru" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "joblib>=1.6.0",
+    "matplotlib>=3.11.2",
+    "pandas>=3.0.6",
+    "scikit-learn>=1.9.1",
+    "seaborn>=0.13.2",
+]
 
 [project.scripts]
-itg-classification = "itg_classification:main"
+itg-classification = "itg_classification.predict:main"
 
 [build-system]
 requires = ["uv_build>=0.10.10,<0.11.0"]
@@ -18,6 +24,8 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
+    "jupyter>=1.1.1",
+    "pandas-stubs>=3.0.5.260914",
     "pytest>=9.1.1",
     "ruff>=0.17.0",
     "ty>=0.0.87",
@@ -38,3 +46,7 @@ select = ["E", "F", "I", "UP", "B", "SIM"]
 
 [tool.ruff.lint.isort]
 known-first-party = ["itg_classification"]
+
+[tool.ruff.lint.per-file-ignores]
+# Notebooks hold example sentences that are longer than a line
+"notebooks/*.ipynb" = ["E501"]

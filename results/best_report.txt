@@ -1,0 +1,17 @@
+Model: LogReg balanced, words + chars
+
+Accuracy:    0.8158
+Macro F1:    0.7479
+Weighted F1: 0.8160
+
+          precision  recall      f1  support
+negative     0.5570  0.6377  0.5946       69
+neutral      0.8622  0.8870  0.8744      522
+positive     0.8029  0.7486  0.7748      370
+
+Confusion matrix (rows: true, columns: predicted)
+predicted  negative  neutral  positive
+true                                  
+negative         44        6        19
+neutral          10      463        49
+positive         25       68       277

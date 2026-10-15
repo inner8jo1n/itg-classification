@@ -1,0 +1,16 @@
+kind,expected,text
+news,positive,Nokia raised its full-year sales forecast after a strong third quarter.
+news,positive,The company won a EUR 50 million contract to supply turbines.
+news,positive,Net sales increased by 18% to EUR 245 million.
+news,neutral,The annual general meeting will be held on 15 March in Helsinki.
+news,neutral,The company has offices in Finland and Sweden.
+news,neutral,The report will be published on Thursday.
+news,negative,Operating profit fell to EUR 3.1 million from EUR 7.8 million a year earlier.
+news,negative,The company will cut 300 jobs as demand weakens.
+tweet,positive,"$AAPL breaking out to new highs, going long"
+tweet,negative,"$TSLA getting crushed today, glad I sold"
+tweet,negative,"$NFLX looks weak, adding to my short"
+hard: negation,positive,Results were not as bad as analysts feared.
+hard: mixed,neutral,Sales rose in Sweden but fell in Finland.
+hard: business event,positive,The group will open 20 new stores next year.
+no words,,http://stks.co/abc

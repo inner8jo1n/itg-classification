@@ -27,3 +27,6 @@ dist/
 
 # OS
 .DS_Store
+
+# Trained models and model cards (make pipeline)
+models/

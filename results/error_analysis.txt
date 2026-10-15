@@ -1,0 +1,122 @@
+Error analysis: 177 errors of 961 test texts
+
+Errors by kind
+      label predicted  errors  share_of_errors
+0  positive   neutral      68            0.384
+1   neutral  positive      49            0.277
+2  positive  negative      25            0.141
+3  negative  positive      19            0.107
+4   neutral  negative      10            0.056
+5  negative   neutral       6            0.034
+
+Errors by source
+        texts  errors  error_rate  share_of_errors
+source                                            
+news      810     136       0.168            0.768
+tweet     151      41       0.272            0.232
+
+Accuracy by confidence
+            texts  accuracy
+confidence                 
+(0.0, 0.5]     82     0.415
+(0.5, 0.6]    173     0.647
+(0.6, 0.7]    151     0.808
+(0.7, 0.8]    175     0.891
+(0.8, 0.9]    251     0.924
+(0.9, 1.0]    129     0.992
+
+Failure cases
+                        texts  errors  error_rate  error_rate_without
+tweet                   151.0    41.0       0.272               0.168
+negation                 41.0    10.0       0.244               0.182
+down words               64.0    16.0       0.250               0.179
+up and down words         7.0     2.0       0.286               0.183
+number or %             470.0    75.0       0.160               0.208
+short, 6 words or less   45.0     8.0       0.178               0.184
+
+Error rate by ticker memory
+ticker
+agrees           0.127
+disagrees        0.378
+no ticker        0.168
+unseen ticker    0.333
+
+Train labels of texts with a word
+           texts  negative  neutral  positive
+fell         8.0      0.00     0.75      0.25
+decreased    8.0      0.00     0.88      0.12
+loss        63.0      0.08     0.11      0.81
+rose        79.0      0.01     0.05      0.94
+
+Examples
+[positive → neutral, confident, 0.93] The solutions will be used for upgrading the networks of a Russian MSO in 37 different cities in Russia .
+[positive → neutral, confident, 0.89] The company will also be compensated for acting as a reserve batch plant .
+[positive → neutral, confident, 0.88] It will combine and renew the contents and functionality of the current systems for funding and online service as well as their maintenance .
+[positive → neutral, borderline, 0.45] Industry NewsWolseley confident in reslilience amid mixed markets
+[positive → neutral, borderline, 0.47] $CSX is up today to report.  Wall Street is expecting EPS to be at $0.37, and revenues at $2,732B.
+[positive → neutral, borderline, 0.48] - I am pleased that Bjorn Wahlroos has accepted the nomination .
+[positive → negative, confident, 0.90] $FIO won't stay down
+[positive → negative, confident, 0.83] $JNK http://stks.co/2Fcm Does not want to go down... risk appetite still high
+[positive → negative, confident, 0.80] @ACInvestorBlog: $SPY eod run :)
+[positive → negative, borderline, 0.38] PRESS: Serco Set To Appoint Roy Gardner, Ex-Centrica, As Chairman - FT
+[positive → negative, borderline, 0.39] Insight hires Aviva's David Hillier for multi-asset team
+[positive → negative, borderline, 0.41] $LSCC Accumulation chart continues to make new highs showing accumulation continuing to take place http://stks.co/aDpO
+[neutral → positive, confident, 0.86] $ENDP Was looking for a long entry but today's price action wasn't appealing
+[neutral → positive, confident, 0.83] Sales were down 14 per cent in Finland and up 27 per cent abroad where sales were lifted by the strong growth in sales in Russia and Lithuania .
+[neutral → positive, confident, 0.82] Despite sales growth, UK's Tesco cautions recovery to be bumpy
+[neutral → positive, borderline, 0.39] Founded in 2000 , BioView automates laboratory tests , especially diagnostic tests for cancer .
+[neutral → positive, borderline, 0.43] Previously , it projected the figure to be slightly lower than in 2009 .
+[neutral → positive, borderline, 0.44] According to Chairman Michael Hornborg , the organizations has merely criticised Raisio 's weak performance .
+[negative → positive, confident, 0.74] $RNN More bleeding Monday.
+[negative → positive, confident, 0.73] $XLB the weakest sector this year and possible false breakout  http://stks.co/dL1Z
+[negative → positive, confident, 0.71] $ENDP being sued by FTC.....nobody will buy them with that hanging over their heads
+[negative → positive, borderline, 0.39] Buyback not trending right ( $CPIX spending more as shares pricier). Hopefully will pull back w 6.87 Q2 closing VWAP
+[negative → positive, borderline, 0.44] HSBC Says Unit to Book $585 Million Charge on Settlement
+[negative → positive, borderline, 0.46] Berkshire discloses unit's ties to Iran, opens probe
+[negative → neutral, confident, 0.58] Casinos red before the bell: $LVS -0.75%, $WYNN -0.47%, $WYNN -0.47% > unusual comibinations of what's running, what's red before the bell
+[negative → neutral, confident, 0.53] Academics claim Google Android two-factor authentication is breakable. #security #authentication #hacking $goog https://t.co/nJx4mnrGLo
+[negative → neutral, confident, 0.47] $AMD big dumping... would not touch it for a while
+[negative → neutral, borderline, 0.39] $FB I've been dead on so far. Such a bloated valuation. https://t.co/czCf8Kbrlt
+[negative → neutral, borderline, 0.40] $BBRY Actually lost .03c per share if U incl VZ as no debt and 3.1 in Cash.
+[negative → neutral, borderline, 0.41] Diageo sales disappoint as currency and comparatives leave bitter taste
+[neutral → negative, confident, 0.56] $BABA may take a few days wks months watch what happened to $FB $TWTR after they IPO. mrkt needs to washout. to hunt well need 2 wait stalk.
+[neutral → negative, confident, 0.54] This one was at one time targeted for June 5 , but if we had to guess , it 's been pushed back -- maybe we 're crazy , but we feel like it has n't leaked enough to meet that date at this point .
+[neutral → negative, confident, 0.54] $AAPL broke descending channel....will it hold?
+[neutral → negative, borderline, 0.38] CompaniesHoward Davies appointment as RBS director delayed
+[neutral → negative, borderline, 0.42] `` This could be us .
+[neutral → negative, borderline, 0.42] Only L+ñnnen Tehtaat showed a loss , but it has only recently started streamlining measures .
+
+Conclusions
+
+1. Business events without evaluative words are the largest failure
+   case. 117 of 177 errors are on the positive / neutral border, and 13
+   of the 26 errors with confidence 0.75+ have doubtful labels: news
+   like "will expand the chain to 45 stores" is labeled positive with
+   no sentiment word in it. A bag-of-words model has a ceiling here.
+2. The train set has almost no negative news. Dropping the conflicting
+   texts on day 2 (option A) removed 514 of 642 negative news, all of
+   the "net profit decreased" kind. In train, "fell" and "decreased"
+   are never negative and "loss" is positive in 81% of texts, so
+   "Profit fell sharply" is predicted positive.
+3. Tweets are memorized by ticker: 38% errors when a ticker's usual
+   train label disagrees with the true one, 13% when it agrees.
+4. Tweet slang and negation: "more bleeding", "sinking ship",
+   "won't stay down". Negated texts have 24% errors against 18%.
+5. Neutral tweets: 0 of 7 right.
+Not a problem: numbers, percentages, short texts.
+
+Confidence is meaningful: above 0.9 the model is right 99% of the
+time, at 0.5 or below 42%.
+
+What to improve next, most promising first
+
+1. Keep one negative copy of every conflicting news text (option B)
+   instead of dropping both: brings back 514 negative news.
+2. Replace every cashtag with one token like "$ticker", so the model
+   cannot memorize companies and handles unseen ones.
+3. Mark negation scope: "won't stay down" -> "won't stay not_down".
+4. Add a financial sentiment lexicon (Loughran-McDonald) as features,
+   for slang and words rare in train.
+5. Try a contextual model (FinBERT): business events and mixed
+   sentences need meaning, not word counts.
+6. At inference, show the confidence and flag predictions below 0.6.

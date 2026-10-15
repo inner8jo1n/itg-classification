@@ -1,2 +1,1 @@
-def main() -> None:
-    print("Hello from itg-classification!")
+"""Sentiment classification of financial news and tweets."""
